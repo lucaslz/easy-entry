@@ -9,6 +9,8 @@ return [
         // Renderer settings
         'renderer' => [
             'template_path' => __DIR__ . '/App/Views/',
+            // 'template_path_cache' => __DIR__ . '/App/ViewsCache/'
+            'template_path_cache' => false            
         ],
         'db' => [
             'driver' => 'mysql',

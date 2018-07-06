@@ -23,7 +23,7 @@ if (!function_exists("view")) {
 	 */
 	function view($response, $page, $args)
 	{
-		return Core\SApp::getApp()->getContainer()->renderer->render(
+		return Core\SApp::getApp()->getContainer()->view->render(
 			$response,
 			$page,
 			$args
@@ -39,5 +39,26 @@ if (!function_exists("container")) {
 	function container($response, $page, $args)
 	{
 		return Core\SApp::getApp()->getContainer();
+	}
+}
+
+
+if (!function_exists("getCss")) {
+	
+	/**
+	 * Helper responsavel por chamar o css da pagina
+	 */
+	function getCss()
+	{
+		return \Core\SApp::getApp()->getContainer()['css']->dump();
+	}
+}
+
+if (!function_exists("siteUrl")) {
+	function siteUrl($url)
+	{
+		$req = \Core\SApp::getApp()->request();
+		$uri = $req->getUrl() . $req->getRootUri();
+		return $uri . '/' . ltrim($url, '/');
 	}
 }

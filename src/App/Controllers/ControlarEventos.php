@@ -14,6 +14,10 @@ class ControlarEventos
 {
 	public function index($request, $response, $args)
 	{
-		return view($response, 'index.phtml', $args);
+		$dados = [
+			'nomeTela' => 'Easy Entry'
+		];
+
+		return view($response, 'pagina-principal/principal.twig', $dados);
 	}
 }
