@@ -1,0 +1,36 @@
+{% include 'base-template/cabecalho-simples.twig' %}
+<main id="main-content">
+    <div class="container">
+        <section id="services" class="py-5">
+            <div class="col-md-6 col-sm-12 col-lg-6 offset-md-3 offset-lg-3">
+                <div class="col-md-12 col-sm-12 col-lg-12">
+                    <h1 class="mt-5 text-center titulo">Cadastro!</h1>
+                    <form class="mt-5">
+                        <div class="form-group row">
+                            <label for="tipoCadastro" class="col-sm-4 col-form-label">Tipo Cadastro</label>
+                            <div class="col-sm-8">
+                                <select id="tipoCadastro" name="tipoCadastro" class="custom-select" onchange="abilitarTipoCadastro()">
+                                    <option>Selecione</option>
+                                    {% for pessoa in tipoPessoa %}
+                                    <option value="{{ loop.index }}">{{ pessoa }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-4" id="usuario-pessoa">
+                            {% include 'pagina-principal/cadastro/cadastro-pessoa.twig' %}
+                        </div>
+                        <div class="mt-4" id="usuario-juridico">
+                            {% include 'pagina-principal/cadastro/cadastro-juridico.twig' %}
+                        </div>
+                        <div id="abilitar-botoes-envio">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button type="reset" class="btn btn-warning">Limpar</button>   
+                        <div>                     
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% include 'base-template/rodape-simples.twig' %}
