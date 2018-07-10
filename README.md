@@ -1,22 +1,64 @@
 <p align="center">
-  <img src="resources/assets/lua/lua_framework.png" width="150"/>
+  <img src="public/assets/img/logo_easy_entry.png" width="150"/>
 </p>
 
-## Sobre o Framework Lua
+# Trabalho de Engenharia de Software 2
 
 <p align="justify">
-Lua é um micro framework de aplicação web, que foi feito a partir do Slim Framework, ele é um framework gratuito e totalmente licenciado para ser distribuido modificado e até mesmo vendido, esta micro framework pode crescer e abrigar até aplicações complexas, sendo indicado até para o desenvolvimento de API's já que le irá totalmente pronto para realizar essa tarefa, a sintaxe dele é bem simples e elegante não tendo a necessidade nem de extender controllers.
+O trabalho basicamente tem duas partes, primeiro foi criado um framework para tentar abordar não só 1 ou 2, mas vários conceitos conceitos de padrões de projetos abordados dentro de sala,
+segue logo abaixo o framework que foi feito como base para o desenvolvimento do trabalho:
 </p>
 
-## Documentação
+- [Lua Framework](https://github.com/lucaslz/lua)
 
 <p align="justify">
-Em poucos minutos qualquer pessoa que tenha um bom conhecimento em Orientação a Objetos e frameworks MVC vai entender como o framework funciona bem rápido, por enquanto ainda não temos uma documentação pronta, mas a própria documentação do Slim não funciona.
+A decisão de criar um framework para o desenvolvimento do sistema partiu apartir da necessidade de tirar o maior proveito possível da disciplina de engenharia de software, pois fazer o trabalho em código puro não é viável e iria demorar muito, e também não seria viável usar um framework, pois não daria para usar alguns conceitos aprendidos dentro de sala.
+</p>
+
+## Como foi desenvolvido o trabalho ?
+
+<p align="justify">
+Talvez não sejá possível criar o sistema completo, pelo fato da data da entrega do trabalho, mas creio que aproveitamos muito tudo o que foi aprendido na matéria, e a documentão do sistema está muito bem definida e não terá problemas de ter o entendimento do trabalho. conseguimos abordar vários conceitos de padrões de projeto de criação, estrutural e comportamental, e também trabalhamos com o conceito de componentes e fizemos alguns testes unitários, segue logo abaixo alguns conceitos usados:
+</p>
+
+
+- Componentes
+- Padrão MVC
+- Parão Singleton: Usando o conseito de gerenciamento de depencenia para usar serviços em todo o sistema em tempo de execução.
+- Composite: Para isso usando o conceito de trait no PHP
+- Bridge: As traits ajudam nesse ponto além de o conceito de pacotes que ajudam a criar funcionalidades isolada evitando o acoplamento no sistema.
+- Decorator: Mais uma vez as traits ajudam nesse conceito, pois ao usar traits é possível reutiliza-las em várias partes no sistema funciona como um tipo de herança multipla.
+- PHPUnit: também foi usado os testes unitário para testar as funcionalidades básicas do sistema.
+
+## Modelagem do sistema
+
+<p align="justify">
+Diagrama de classes do sistema, como não foi possível entregar o sistema completo ao olhar os arquivos criado nas pastas do MVC, verá que estara faltando algumas coisa:
+</p>
+
+<p align="center">
+  <img src="public/assets/img/Easy Entry.png" width="100%"/>
+</p>
+
+<p align="justify">
+Diagrama de padrões de projetos utilizado no sistema, lembrando que não foi só esses os padrões utilizados no sistema, mas foram os propostos enquanto o trabalho ainda estava em faze de desenvolvimento.
+</p>
+
+<p align="center">
+  <img src="public/assets/img/Aplicacao.png" width="100%"/>
+</p>
+
+<p align="justify">
+Esse é o diagrama ER do sistema é o diagrama oficial e é o ultilizado no sistema, lembrando que o script de criação do banco de daos esta junto com o código no GitHub, na pasta "Arquivos fontes do Tralho".
+</p>
+
+<p align="center">
+  <img src="public/assets/img/Easy Entry ER.png" width="100%"/>
 </p>
 
 ## Testes
 
-Basta rodar o PHPUnit no projeto na linha de comando
+Para rodar os teste no sistema use o  PHPUnit dentro da pasta de projeto na linha de comando:
 
 ```bash
 $ phpunit
@@ -25,6 +67,7 @@ $ phpunit
 ## Creditos
 
 - [Lucas Lima](https://github.com/lucaslz)
-
-## License
-The Slim Framework is licensed under the MIT license. See [License File](https://github.com/slimphp/Slim/blob/3.x/LICENSE.md) File for more information.
+- Samuell Magalhães
+- Leonardo Barcelos Nardy
+- Isabela Cristina Oliveira
+-  Ângelo Thasmo Bitencourt 

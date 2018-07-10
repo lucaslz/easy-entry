@@ -19,10 +19,11 @@
         "slim/php-view": "^2.0",
         "monolog/monolog": "^1.17",
         "firebase/php-jwt": "5.0.0",
-        "illuminate/database": "5.4.36",
+        "illuminate/database": "5.6.*",
         "robmorgan/phinx": "^0.9.2",
         "tuupola/slim-jwt-auth": "^3.0",
-        "slim/twig-view": "^2.4"
+        "slim/twig-view": "^2.4",
+        "illuminate/validation": "^5.6"
     },
     "autoload": {
         "psr-4": {

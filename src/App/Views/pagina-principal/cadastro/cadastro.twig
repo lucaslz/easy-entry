@@ -2,10 +2,10 @@
 <main id="main-content">
     <div class="container">
         <section id="services" class="py-5">
-            <div class="col-md-6 col-sm-12 col-lg-6 offset-md-3 offset-lg-3">
+            <div class="col-md-8 col-sm-12 col-lg-8 offset-md-2 offset-lg-2">
                 <div class="col-md-12 col-sm-12 col-lg-12">
                     <h1 class="mt-5 text-center titulo">Cadastro!</h1>
-                    <form class="mt-5">
+                    <form action="validaCadastro" method="post" class="mt-5">
                         <div class="form-group row">
                             <label for="tipoCadastro" class="col-sm-4 col-form-label">Tipo Cadastro</label>
                             <div class="col-sm-8">
@@ -24,6 +24,7 @@
                             {% include 'pagina-principal/cadastro/cadastro-juridico.twig' %}
                         </div>
                         <div id="abilitar-botoes-envio">
+                            <hr>
                             <button type="submit" class="btn btn-primary">Enviar</button>
                             <button type="reset" class="btn btn-warning">Limpar</button>   
                         <div>                     
