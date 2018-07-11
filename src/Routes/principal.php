@@ -24,7 +24,7 @@ SApp::getApp()->get('/contato','App\Controllers\Principal\Contato:inicio');
 SApp::getApp()->post('/contatoValidar','App\Controllers\Cadastro\Contato:contatoValidar');
 
 //Rota para contato no sistema
-SApp::getApp()->get('/sobre','App\Controllers\Principal\sobre:inicio');
+SApp::getApp()->get('/sobre','App\Controllers\Principal\Sobre:inicio');
 
 //Rotas para controle de eventos
 SApp::getApp()->get('/visualizar[/{id}]','App\Controllers\ControleEventos\Eventos:visualizar');
