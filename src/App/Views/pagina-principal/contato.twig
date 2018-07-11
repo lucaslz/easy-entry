@@ -1,0 +1,45 @@
+{% include 'base-template/cabecalho-simples.twig' %}
+<main id="main-content">
+    <div class="container">
+        <section id="services" class="py-5">
+            <div class="col-md-8 col-sm-12 col-lg-8 offset-md-2 offset-lg-2">
+                <div class="col-md-12 col-sm-12 col-lg-12">
+                    <h1 class="mt-5 text-center titulo">Contato !</h1>
+                    <div class="card mt-2">
+                        <div class="card-body">
+                            <form action="entrarValidar" method="post">
+                                <div class="form-group">
+                                    <label for="inputEmail">E-mail</label>
+                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="exemplo@exemplo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputNome">Nome</label>
+                                    <input type="text" name="nome" class="form-control" id="exampleInputPassword1" placeholder="Nome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputSobrenome">Sobrenome</label>
+                                    <input type="text" name="sobrenome" class="form-control" id="exampleInputPassword1" placeholder="Sobrenome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAssunto">Assunto</label>
+                                    <input type="text" name="assunto" class="form-control" id="exampleInputPassword1" placeholder="Assunto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputSite">Site</label>
+                                    <input type="text" name="site" class="form-control" id="exampleInputPassword1" placeholder="Site">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputMenssagem">Menssagem</label>
+                                    <textarea name="mensagem" cols="5" rows="5" name="msg" form="usrform" class="form-control">Digite sua mensagem</textarea>.
+                                </div>
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                                <button type="submit" class="btn btn-warning">Limpar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% include 'base-template/rodape-simples.twig' %}

@@ -6,14 +6,19 @@
 namespace App\Controllers\Principal;
 
 use App\Models\TipoPessoa;
-use Illuminate\Validation\Validator;
-use Illuminate\Validation\Factory as ValidatorFactory;
 
 /**
- * Base de todos os controllers da aplicacao
+ * Controle do sistema principal
  */
 class Principal
 {
+	/**
+	 * variavel de controle de erro
+	 *
+	 * @var mixed
+	 */
+	public $msgError = [];
+
 	/**
 	 * Tela principal do site
 	 * 
@@ -29,7 +34,7 @@ class Principal
 
 		return view($response, 'pagina-principal/principal.twig', $dados);
 	}
-
+	
 	/**
 	 * Tela de cadastro do sistema
 	 * 
@@ -42,62 +47,14 @@ class Principal
 		$dados = [
 			'nomeTela' => 'Easy Entry',
 			'tipoPessoa' => [
-				'Fisica',
-				'Juridica'
+				'Pessoa Fisica',
+				'Pessoa Juridica'
 			],
 			'tipoUsuario' => [
 				'Comum',
 				'Administrador'
 			]
 		];
-
 		return view($response, 'pagina-principal/cadastro/cadastro.twig', $dados);
-	}
-
-	/**
-	 * Metodo que valida os dados vindo do formulario de cadastro
-	 * 
-	 * @param Object $request
-	 * @param Object $response
-	 * @param Object $args
-	 */
-	public function validaCadastro($request, $response, $args)
-	{
-		$dados = self::pegarDadosPessoais($request->getParsedBody());
-
-        $validator = [
-            'email' => 'required',
-		];
-		
-		$factory = new ValidatorFactory();
-        $v = $factory->make($data, $validator);
-		var_dump($v);
-		var_dump($dados); die();
-	}
-
-	/**
-	 * Metodo que valida os dados vindo do formulario de cadastro
-	 * 
-	 * @param Object $request
-	 * @param Object $response
-	 * @param Object $args
-	 */
-	public function pegarDadosPessoais($dados)
-	{
-		//Removendo chaves desnecessarias
-		unset($dados['emailj']);
-		unset($dados['senhaj']);
-		unset($dados['confirmar_senhaj']);
-		unset($dados['razao_socialj']);
-		unset($dados['inscricao_estadualj']);
-		unset($dados['enderecoj']);
-		unset($dados['numeroj']);
-		unset($dados['cepj']);
-		unset($dados['bairroj']);
-		unset($dados['ufj']);	
-		unset($dados['cidadej']);
-		unset($dados['cnpjj']);
-		
-		return $dados;
-	}
+    }
 }

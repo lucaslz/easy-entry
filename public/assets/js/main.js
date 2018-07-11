@@ -36,5 +36,13 @@ function abilitarTipoCadastro() {
     }
 }
 
+function verificarPaginaPost() {
+    var tipoCadastro = document.querySelector("#tipoCadastro");
+    if (tipoCadastro != null) {
+        abilitarTipoCadastro();
+    }
+}
+
 //Chamado funcoes
 desabilitarCamposCadastro();
+verificarPaginaPost();

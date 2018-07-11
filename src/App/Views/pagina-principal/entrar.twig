@@ -1,0 +1,33 @@
+{% include 'base-template/cabecalho-simples.twig' %}
+<main id="main-content">
+    <div class="container">
+        <section id="services" class="py-5">
+            <div class="col-md-6 col-sm-12 col-lg-6 offset-md-3 offset-lg-3">
+                <div class="col-md-12 col-sm-12 col-lg-12">
+                    <h1 class="mt-5 text-center titulo">Login !</h1>
+                    <div class="card mt-5">
+                        <div class="card-body">
+                            <form action="entrarValidar" method="post">
+                                <div class="form-group">
+                                    <label for="inputEmail">E-mail</label>
+                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="exemplo@exemplo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputSenha">Senha</label>
+                                    <input type="password" name="senha" class="form-control" id="exampleInputPassword1" placeholder="*****">
+                                </div>
+                                <div class="form-check mb-4">
+                                    <input type="checkbox" name="check" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Lembrar-me</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                                <button type="submit" class="btn btn-warning">Limpar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% include 'base-template/rodape-simples.twig' %}

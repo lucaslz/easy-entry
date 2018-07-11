@@ -4,15 +4,36 @@
         <section id="services" class="py-5">
             <div class="col-md-8 col-sm-12 col-lg-8 offset-md-2 offset-lg-2">
                 <div class="col-md-12 col-sm-12 col-lg-12">
+                    <div class="mt-5">
+                        {% if errors %}
+                            <div class="alert alert-danger" role="alert">
+                                <ul>
+                                    {% for error in errors %}
+                                        {% for erro in error %}
+                                            <li id="erroCadastro">{{ erro }}</li>
+                                        {% endfor %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% elseif success %}
+                            <div class="alert alert-success text-center" role="alert">
+                                <h4>Dados inseridos com sucesso !!!</h4>
+                            </div>
+                        {% endif %}
+                    </div>
                     <h1 class="mt-5 text-center titulo">Cadastro!</h1>
                     <form action="validaCadastro" method="post" class="mt-5">
                         <div class="form-group row">
                             <label for="tipoCadastro" class="col-sm-4 col-form-label">Tipo Cadastro</label>
                             <div class="col-sm-8">
-                                <select id="tipoCadastro" name="tipoCadastro" class="custom-select" onchange="abilitarTipoCadastro()">
+                                <select id="tipoCadastro" name="tipoCadastro" class="custom-select" onChange="abilitarTipoCadastro()">
                                     <option>Selecione</option>
                                     {% for pessoa in tipoPessoa %}
-                                    <option value="{{ loop.index }}">{{ pessoa }}</option>
+                                        {% if loop.index == dados.tipoCadastro %}
+                                            <option value="{{ loop.index }}" selected>{{ pessoa }}</option>
+                                        {% else %}
+                                            <option value="{{ loop.index }}">{{ pessoa }}</option>
+                                        {% endif %}
                                     {% endfor %}
                                 </select>
                             </div>

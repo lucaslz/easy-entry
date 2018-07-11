@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @copyright Copyright (c) 2018 Lucas Lima
+ */
+namespace App\Controllers\ControleEventos;
+
+use App\Models\TipoPessoa;
+
+/**
+ * Controle do sistema principal
+ */
+class Eventos
+{
+	/**
+	 * Tela principal do site
+	 * 
+	 * @param Object $request
+	 * @param Object $response
+	 * @param Object $args
+	 */
+	public function visualizar($request, $response, $args)
+	{
+		$dados = [
+			'nomeTela' => 'Easy Entry'
+		];
+
+		return view($response, 'pagina-principal/controla-eventos/visualizar-evento.twig', $dados);
+    }
+}
